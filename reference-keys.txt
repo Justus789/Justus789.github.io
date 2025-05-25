@@ -1,2 +1,10 @@
 curriculum-vitae
 plan-voor-de-toekomst
+vrije-ruimte
+data-management
+reproducible
+sql
+package-maken
+project-referenties
+bronnen-voor-het-project
+parameters-in-rmarkdown

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Plan voor de toekomst | Portfolio</title>
-  <meta name="description" content="2 Plan voor de toekomst | Portfolio" />
+  <title>8 Project referenties | Portfolio</title>
+  <meta name="description" content="8 Project referenties | Portfolio" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Plan voor de toekomst | Portfolio" />
+  <meta property="og:title" content="8 Project referenties | Portfolio" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Plan voor de toekomst | Portfolio" />
+  <meta name="twitter:title" content="8 Project referenties | Portfolio" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="vrije-ruimte.html"/>
+<link rel="prev" href="package-maken.html"/>
+<link rel="next" href="parameters-in-rmarkdown.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,20 +165,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="plan-voor-de-toekomst" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Plan voor de toekomst<a href="plan-voor-de-toekomst.html#plan-voor-de-toekomst" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Ik wil in een lab werken waar ik kan werken aan ‘de toekomst’. Ergens waar ik echt iets kan doen wat later mensen helpt. Dit kan zijn in de ontwikkeling van medicatie maar ook in het onderzoeken van ziektes.</p>
-<p>Ik ben nog niet helemaal klaar om te starten in deze richting. Ik heb al op het lab gewerkt wat een benodigde skill is. Beter worden in het analyseren van de data wil ik ontwikkelen als skill.</p>
-<p>Tijdens de profilering van Data Science for biology 1 hebben we geleerd data te analyseren, dit met R en bash, ook is Jasp en Excel gebruikt bij de Data Science cursus. Tijdens Data Science for biology 2 wil ik meer leren over het ontwikkelen van antilichamen. Hier komt tegenwoordig een heleboel machine learning bij te pas. Daarom wil ik proberen of ik een package met machine learning kan leren.</p>
+<div id="project-referenties" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Project referenties<a href="project-referenties.html#project-referenties" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><em>korte uitleg</em></p>
+<p>In deze opdracht wordt een korte introductie geschreven over het project waar we tijdens deze cursus aan werken. Hiervoor wordt gewerkt met Zotero en de Zotero connector als chrome extensie om referenties te maken.
+Er worden 5 artikelen gezocht die informatie geven over single cell RNA sequencing en/of splicing.</p>
+<p><em>opdracht</em></p>
+<p>Single cell RNA sequencing is een manier van RNA sequencing waar gefocust wordt op individuele cellen. Bij deze manier van RNA sequencen krijg je van (meestal) grote aantallen cellen de RNA ‘activiteit’ van de genen. Op deze manier kan op basis van RNA activiteit celtypes en celstadia onderscheiden worden. Wij gebruiken bij ons project de Seurat package, deze kan gebruikt worden om cellen te clusteren. Cellen met soortgelijke RNA activiteit worden samengezet binnen een grafiek. In de grafiek is eenvoudig aan te geven welke clusters welk celtype of welk stadia van cel het zijn. Wel is kennis nodig van de celtypes die onderzocht zijn om deze clusters in te delen binnen een categorie.<span class="citation">[@chengReviewSingleCellRNASeq2023]</span></p>
+<p>Om deze clusters te vormen word de data eerst genormaliseerd en zal PCA uitgevoerd worden. Dit wordt gedaan om de soms wel miljoenen cellen die allemaal variëren ‘samen te vatten’ tot principal components. Alle cellen die variëren worden verandert in groepen die gelijke variatie hebben. Zo worden de dimensies vermindert en simpelere clusters gemaakt worden. <span class="citation">[@lahnemannElevenGrandChallenges2020]</span></p>
+<p>Nadat de clusters zijn gemaakt kan van elke cluster worden gekeken welke genen hoge activiteit hebben. Op basis hiervan worden celtypes toegewezen aan de clusters. Aangezien er nu clusters zijn met vergelijkbare variatie is het lastig om binnen een cluster verschillen aan te tonen. Splicing kan zorgen voor verschillen binnen een gen met meerdere exonen. Voor het onderzoeken van de verschillen die veroorzaakt worden door Splicing zijn ook packages/algoritmes gemaak. <span class="citation">[@chenSingleCellRNASeqTechnologies2019]</span></p>
+<p>Wij behandelen 3 packages tijdens dit project die worden gebruikt om single cell splicing te analyseren. De packages Brie2, Suppa2 en Whippet.</p>
+<p><strong>Brie2</strong></p>
+<p>Brie2 is een R package wat gebruikt wordt om de verschillende isoformen te vinden binnen de clusters. Brie2 maakt gebruik van een Bayesian Hierarchical model. Dit model kan de splicing ratio voorspellen door te kijken naar eigenschappen van cel-soorten en cel-stadia. Brie2 heeft 4 soorten modi: bij de eerste (Mode0) wordt niet gekeken naar eigenschappen. Bij Mode1 wordt gekeken naar gen eigenschappen zoals gen sequenties. Mode2-quant heeft als doel om cellen te onderscheiden op basis van 1 eigenschap van de cellen. Deze eigenschap wordt bekeken en als er verschillen zijn geeft dit informatie over de Percentage of Spliced In (PSI). De laatste optie is Mode2-diff, met deze optie worden vergelijkingen gemaakt tussen cellen op basis van de cel eigenschappen. Voorbeelden zijn cel conditie. <span class="citation">[@huangBRIE2ComputationalIdentification2021]</span></p>
+<p><strong>Suppa2</strong></p>
+<p>Suppa2 werkt op vergelijkbare manier. Het maakt gebruik van tools die snel het transcript kunnen quantificeren, ofwel berekenen hoeveel RNA wordt geuit. Suppa2 gebruikt de verschillen in uiting van RNA om de PSI te berekenen.
+Er wordt onderscheid gemaakt in de soorten van exon-skipping gebeurtenissen, F1 kan aangeven hoeveel transcript wordt geuit met een exon, terwijl F2 meer zegt over hoeveel transcript wordt geuit zonder het exon. <span class="citation">[@alamancosLeveragingTranscriptQuantification2015]</span></p>
+<p><strong>Whippet</strong></p>
+<p>Whippet is ook een ‘event level’ tool om splicing te onderzoeken. Dit houdt in dat net als bij Suppa2 er wordt gekeken naar de splicing gebeurtenissen als exon-skipping. Whippet maakt daarnaast ook gebruik van entropie metingen. Whippet maakt ‘Continuous Splice Graphs’. Dit zijn grafieken waarin de punten exon regio’s aangeven en de verbindingen tussen punten geven aan hoe deze exon regio’s verbonden zijn. Dit kan door splicing events maar ook als een exonen naast elkaar liggen. Zo worden isoformen aangegeven door paden die zich onderscheiden tussen de exon regio’s. <span class="citation">[@sterne-weilerEfficientAccurateQuantitative2018]</span></p>
+<div id="bronnen-voor-het-project" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Bronnen voor het project<a href="project-referenties.html#bronnen-voor-het-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Alamancos, G. P., Pagès, A., Trincado, J. L., Bellora, N., &amp; Eyras, E. (2015).
+Leveraging transcript quantification for fast computation of alternative splicing profiles. RNA, 21(9), 1521–1531. <a href="https://doi.org/10.1261/rna.051557.115" class="uri">https://doi.org/10.1261/rna.051557.115</a></p>
+<p>Cheng, C., Chen, W., Jin, H., &amp; Chen, X. (2023).
+A review of single-cell RNA-Seq annotation, integration, and cell–cell communication. Cells, 12(15), 1970. <a href="https://doi.org/10.3390/cells12151970" class="uri">https://doi.org/10.3390/cells12151970</a></p>
+<p>Chen, G., Ning, B., &amp; Shi, T. (2019).
+Single-cell RNA-Seq technologies and related computational data analysis. Frontiers in Genetics, 10, 317. <a href="https://doi.org/10.3389/fgene.2019.00317" class="uri">https://doi.org/10.3389/fgene.2019.00317</a></p>
+<p>Huang, Y., &amp; Sanguinetti, G. (2021).
+BRIE2: Computational identification of splicing phenotypes from single-cell transcriptomic experiments. Genome Biology, 22, 251. <a href="https://doi.org/10.1186/s13059-021-02461-5" class="uri">https://doi.org/10.1186/s13059-021-02461-5</a></p>
+<p>Lähnemann, D., Köster, J., Szczurek, E., McCarthy, D. J., Hicks, S. C., Robinson, M. D., … &amp; Schöenhuth, A. (2020).
+Eleven grand challenges in single-cell data science. Genome Biology, 21, 31. <a href="https://doi.org/10.1186/s13059-020-1926-6" class="uri">https://doi.org/10.1186/s13059-020-1926-6</a></p>
+<p>Sterne-Weiler, T., Weatheritt, R. J., Best, A. J., Ha, K. C. H., &amp; Blencowe, B. J. (2018).
+Efficient and accurate quantitative profiling of alternative splicing patterns of any complexity on a laptop. Molecular Cell, 72(1), 187–200.e6. <a href="https://doi.org/10.1016/j.molcel.2018.08.018" class="uri">https://doi.org/10.1016/j.molcel.2018.08.018</a></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="vrije-ruimte.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="package-maken.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="parameters-in-rmarkdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

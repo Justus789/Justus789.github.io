@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Reproducible | Portfolio</title>
+  <meta name="description" content="5 Reproducible | Portfolio" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Reproducible | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Reproducible | Portfolio" />
+  
+  
+  
+
+<meta name="author" content="Voornaam achternaam" />
+
+
+<meta name="date" content="2025-05-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-management.html"/>
+<link rel="next" href="sql.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Curriculum Vitae</a></li>
+<li class="chapter" data-level="2" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>2</b> Plan voor de toekomst</a></li>
+<li class="chapter" data-level="3" data-path="vrije-ruimte.html"><a href="vrije-ruimte.html"><i class="fa fa-check"></i><b>3</b> Vrije ruimte</a></li>
+<li class="chapter" data-level="4" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>4</b> Data management</a></li>
+<li class="chapter" data-level="5" data-path="reproducible.html"><a href="reproducible.html"><i class="fa fa-check"></i><b>5</b> Reproducible</a></li>
+<li class="chapter" data-level="6" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>6</b> SQL</a></li>
+<li class="chapter" data-level="7" data-path="package-maken.html"><a href="package-maken.html"><i class="fa fa-check"></i><b>7</b> Package maken</a></li>
+<li class="chapter" data-level="8" data-path="project-referenties.html"><a href="project-referenties.html"><i class="fa fa-check"></i><b>8</b> Project referenties</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="project-referenties.html"><a href="project-referenties.html#bronnen-voor-het-project"><i class="fa fa-check"></i><b>8.1</b> Bronnen voor het project</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="parameters-in-rmarkdown.html"><a href="parameters-in-rmarkdown.html"><i class="fa fa-check"></i><b>9</b> Parameters in Rmarkdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Reproducible<a href="reproducible.html#reproducible" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="reproducible.html#cb95-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb95-2"><a href="reproducible.html#cb95-2" tabindex="-1"></a></span>
+<span id="cb95-3"><a href="reproducible.html#cb95-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;Reproducible/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>)</span>
+<span id="cb95-4"><a href="reproducible.html#cb95-4" tabindex="-1"></a></span>
+<span id="cb95-5"><a href="reproducible.html#cb95-5" tabindex="-1"></a><span class="fu">sapply</span>(df[<span class="fu">c</span>(<span class="st">&quot;RawData&quot;</span>, <span class="st">&quot;compName&quot;</span>, <span class="st">&quot;compConcentration&quot;</span>)], typeof)</span></code></pre></div>
+<pre><code>##           RawData          compName compConcentration 
+##          &quot;double&quot;       &quot;character&quot;       &quot;character&quot;</code></pre>
+<p>compConcentration hoort geen character te zijn. concentraties zijn getallen.</p>
+<p>Om een grafiek te maken veranderen we de compConcentration eerst in een getal</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="reproducible.html#cb97-1" tabindex="-1"></a>graph <span class="ot">&lt;-</span> df[, <span class="fu">c</span>(<span class="st">&quot;compName&quot;</span>, <span class="st">&quot;compConcentration&quot;</span>, <span class="st">&quot;RawData&quot;</span>, <span class="st">&quot;expType&quot;</span>)]</span>
+<span id="cb97-2"><a href="reproducible.html#cb97-2" tabindex="-1"></a></span>
+<span id="cb97-3"><a href="reproducible.html#cb97-3" tabindex="-1"></a><span class="co">#Eerst compConcentration veranderen naar numeric.</span></span>
+<span id="cb97-4"><a href="reproducible.html#cb97-4" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(graph<span class="sc">$</span>compConcentration)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="reproducible.html#cb99-1" tabindex="-1"></a><span class="co">#Een waarde wordt geteld als NA, dit kwam omdat een waarde met , was opgegeven.</span></span>
+<span id="cb99-2"><a href="reproducible.html#cb99-2" tabindex="-1"></a><span class="co">#Dit veranderen we met deze command gelijk voor de hele column</span></span>
+<span id="cb99-3"><a href="reproducible.html#cb99-3" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;,&quot;</span>, <span class="st">&quot;.&quot;</span>, graph<span class="sc">$</span>compConcentration)</span>
+<span id="cb99-4"><a href="reproducible.html#cb99-4" tabindex="-1"></a></span>
+<span id="cb99-5"><a href="reproducible.html#cb99-5" tabindex="-1"></a><span class="co">#Nu kan de column verandert worden tot numeric</span></span>
+<span id="cb99-6"><a href="reproducible.html#cb99-6" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(graph<span class="sc">$</span>compConcentration)</span>
+<span id="cb99-7"><a href="reproducible.html#cb99-7" tabindex="-1"></a></span>
+<span id="cb99-8"><a href="reproducible.html#cb99-8" tabindex="-1"></a>graph</span></code></pre></div>
+<pre><code>## # A tibble: 360 × 4
+##    compName                   compConcentration RawData expType   
+##    &lt;chr&gt;                                  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     
+##  1 2,6-diisopropylnaphthalene              4.99      44 experiment
+##  2 2,6-diisopropylnaphthalene              4.99      37 experiment
+##  3 2,6-diisopropylnaphthalene              4.99      45 experiment
+##  4 2,6-diisopropylnaphthalene              4.99      47 experiment
+##  5 2,6-diisopropylnaphthalene              4.99      41 experiment
+##  6 2,6-diisopropylnaphthalene              4.99      35 experiment
+##  7 2,6-diisopropylnaphthalene              4.99      41 experiment
+##  8 2,6-diisopropylnaphthalene              4.99      36 experiment
+##  9 2,6-diisopropylnaphthalene              4.99      40 experiment
+## 10 2,6-diisopropylnaphthalene              4.99      38 experiment
+## # ℹ 350 more rows</code></pre>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="reproducible.html#cb101-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb101-2"><a href="reproducible.html#cb101-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb101-3"><a href="reproducible.html#cb101-3" tabindex="-1"></a></span>
+<span id="cb101-4"><a href="reproducible.html#cb101-4" tabindex="-1"></a>graph <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> RawData, <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb101-5"><a href="reproducible.html#cb101-5" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb101-6"><a href="reproducible.html#cb101-6" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb101-7"><a href="reproducible.html#cb101-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/graph-1.png" width="672" /></p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="reproducible.html#cb104-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb104-2"><a href="reproducible.html#cb104-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb104-3"><a href="reproducible.html#cb104-3" tabindex="-1"></a></span>
+<span id="cb104-4"><a href="reproducible.html#cb104-4" tabindex="-1"></a><span class="co"># Stap 1: Bereken de gemiddelde waarde van de negatieve controle</span></span>
+<span id="cb104-5"><a href="reproducible.html#cb104-5" tabindex="-1"></a>mean_control_negative <span class="ot">&lt;-</span> graph <span class="sc">%&gt;%</span></span>
+<span id="cb104-6"><a href="reproducible.html#cb104-6" tabindex="-1"></a>  <span class="fu">filter</span>(expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb104-7"><a href="reproducible.html#cb104-7" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_value =</span> <span class="fu">mean</span>(RawData, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb104-8"><a href="reproducible.html#cb104-8" tabindex="-1"></a>  <span class="fu">pull</span>(mean_value)</span>
+<span id="cb104-9"><a href="reproducible.html#cb104-9" tabindex="-1"></a></span>
+<span id="cb104-10"><a href="reproducible.html#cb104-10" tabindex="-1"></a><span class="co"># Stap 2: Normaliseer de data, zodat de negatieve controle gemiddeld 1 is</span></span>
+<span id="cb104-11"><a href="reproducible.html#cb104-11" tabindex="-1"></a>graph_normalized <span class="ot">&lt;-</span> graph <span class="sc">%&gt;%</span></span>
+<span id="cb104-12"><a href="reproducible.html#cb104-12" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">normalized_RawData =</span> RawData <span class="sc">/</span> mean_control_negative)</span>
+<span id="cb104-13"><a href="reproducible.html#cb104-13" tabindex="-1"></a></span>
+<span id="cb104-14"><a href="reproducible.html#cb104-14" tabindex="-1"></a><span class="co"># Stap 3: Maak een nieuwe scatter plot met de genormaliseerde waarden</span></span>
+<span id="cb104-15"><a href="reproducible.html#cb104-15" tabindex="-1"></a>graph_normalized <span class="sc">%&gt;%</span></span>
+<span id="cb104-16"><a href="reproducible.html#cb104-16" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized_RawData, <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb104-17"><a href="reproducible.html#cb104-17" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb104-18"><a href="reproducible.html#cb104-18" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb104-19"><a href="reproducible.html#cb104-19" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb104-20"><a href="reproducible.html#cb104-20" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Genormaliseerde waarde (t.o.v. controle)&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Er zijn 3 controles gedaan tijdens het onderzoek.
+De negatieve controle is in dit geval een ‘normale’ situatie waarin de C. elegans kan leven. Deze test is gedaan om te kijken of de C. elegans wel bruikbaar zijn.
+Er zijn 2 positieve controles uitgevoerd.
+De verwachting voor de controlPositive was dat er door de ethanol die toegevoegd werd C.elegans doodgaan en het aantal nakomelingen dus daalt.
+De controlVehicleA is een controle om te onderzoeken of het wel de toegevoegde stof is die effect heeft, of dat het medium waarin de stof wordt opgelost ook invloed heeft.
+In dit geval kan dus bevestigt worden dat de controlVehicleA juist is. Als de te testen stof niet word toegevoegd zijn het aantal nakomelingen bijna hetzelfde als de controlNegative.</p>
+<p>De negatieve controle is gebruikt om de data te normaliseren. Dit is gedaan zodat het makkelijker is om de data te vergelijken met elkaar. Op deze manier kan de data vergeleken worden zonder dat er alleen naar vaste waarden wordt gekeken. Zo wordt gekeken naar de effecten van de stoffen ten opzichten van de normale situatie van C. elegans.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="reproducible.html#cb107-1" tabindex="-1"></a><span class="co">#Chatgpt!!!</span></span>
+<span id="cb107-2"><a href="reproducible.html#cb107-2" tabindex="-1"></a></span>
+<span id="cb107-3"><a href="reproducible.html#cb107-3" tabindex="-1"></a><span class="co"># Installeer en laad het pakket</span></span>
+<span id="cb107-4"><a href="reproducible.html#cb107-4" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;drc&quot;</span>)  <span class="co"># alleen de eerste keer nodig</span></span>
+<span id="cb107-5"><a href="reproducible.html#cb107-5" tabindex="-1"></a><span class="fu">library</span>(drc)</span>
+<span id="cb107-6"><a href="reproducible.html#cb107-6" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb107-7"><a href="reproducible.html#cb107-7" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb107-8"><a href="reproducible.html#cb107-8" tabindex="-1"></a></span>
+<span id="cb107-9"><a href="reproducible.html#cb107-9" tabindex="-1"></a><span class="co"># Filter data voor één stof (bijvoorbeeld &#39;compoundA&#39;)</span></span>
+<span id="cb107-10"><a href="reproducible.html#cb107-10" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> graph_normalized <span class="sc">%&gt;%</span> <span class="fu">filter</span>(compName <span class="sc">==</span> <span class="st">&quot;napthalene&quot;</span>)</span>
+<span id="cb107-11"><a href="reproducible.html#cb107-11" tabindex="-1"></a></span>
+<span id="cb107-12"><a href="reproducible.html#cb107-12" tabindex="-1"></a><span class="co"># Pas een log-logistisch model toe</span></span>
+<span id="cb107-13"><a href="reproducible.html#cb107-13" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">drm</span>(normalized_RawData <span class="sc">~</span> compConcentration, <span class="at">data =</span> data_filtered, <span class="at">fct =</span> <span class="fu">LL.4</span>())</span>
+<span id="cb107-14"><a href="reproducible.html#cb107-14" tabindex="-1"></a></span>
+<span id="cb107-15"><a href="reproducible.html#cb107-15" tabindex="-1"></a><span class="co"># Toon samenvatting van het model (inclusief EC50)</span></span>
+<span id="cb107-16"><a href="reproducible.html#cb107-16" tabindex="-1"></a><span class="fu">summary</span>(model)</span>
+<span id="cb107-17"><a href="reproducible.html#cb107-17" tabindex="-1"></a></span>
+<span id="cb107-18"><a href="reproducible.html#cb107-18" tabindex="-1"></a><span class="co"># Genereer predicties voor de plot</span></span>
+<span id="cb107-19"><a href="reproducible.html#cb107-19" tabindex="-1"></a>dose_range <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">compConcentration =</span> <span class="fu">exp</span>(<span class="fu">seq</span>(<span class="fu">log</span>(<span class="fu">min</span>(data_filtered<span class="sc">$</span>compConcentration)),</span>
+<span id="cb107-20"><a href="reproducible.html#cb107-20" tabindex="-1"></a>                                                     <span class="fu">log</span>(<span class="fu">max</span>(data_filtered<span class="sc">$</span>compConcentration)), <span class="at">length.out =</span> <span class="dv">100</span>)))</span>
+<span id="cb107-21"><a href="reproducible.html#cb107-21" tabindex="-1"></a>dose_range<span class="sc">$</span>predicted <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> dose_range)</span>
+<span id="cb107-22"><a href="reproducible.html#cb107-22" tabindex="-1"></a></span>
+<span id="cb107-23"><a href="reproducible.html#cb107-23" tabindex="-1"></a><span class="co"># Maak de dose-response plot</span></span>
+<span id="cb107-24"><a href="reproducible.html#cb107-24" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized_RawData)) <span class="sc">+</span></span>
+<span id="cb107-25"><a href="reproducible.html#cb107-25" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb107-26"><a href="reproducible.html#cb107-26" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> dose_range, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> predicted), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb107-27"><a href="reproducible.html#cb107-27" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb107-28"><a href="reproducible.html#cb107-28" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb107-29"><a href="reproducible.html#cb107-29" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Dose-response curve&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Concentratie (log schaal)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Genormaliseerde respons&quot;</span>)</span></code></pre></div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-management.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sql.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
