@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Reproducible | Portfolio</title>
+  <meta name="description" content="5 Reproducible | Portfolio" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Reproducible | Portfolio" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Reproducible | Portfolio" />
+  
+  
+  
+
+<meta name="author" content="Voornaam achternaam" />
+
+
+<meta name="date" content="2025-08-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-management.html"/>
+<link rel="next" href="sql.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Curriculum Vitae</a></li>
+<li class="chapter" data-level="2" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>2</b> Plan voor de toekomst</a></li>
+<li class="chapter" data-level="3" data-path="vrije-ruimte.html"><a href="vrije-ruimte.html"><i class="fa fa-check"></i><b>3</b> Vrije ruimte</a></li>
+<li class="chapter" data-level="4" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i><b>4</b> Data management</a></li>
+<li class="chapter" data-level="5" data-path="reproducible.html"><a href="reproducible.html"><i class="fa fa-check"></i><b>5</b> Reproducible</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="reproducible.html"><a href="reproducible.html#deel-1"><i class="fa fa-check"></i><b>5.1</b> Deel 1</a></li>
+<li class="chapter" data-level="5.2" data-path="reproducible.html"><a href="reproducible.html#deel-2"><i class="fa fa-check"></i><b>5.2</b> Deel 2</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>6</b> SQL</a></li>
+<li class="chapter" data-level="7" data-path="package-maken.html"><a href="package-maken.html"><i class="fa fa-check"></i><b>7</b> Package maken</a></li>
+<li class="chapter" data-level="8" data-path="project-referenties.html"><a href="project-referenties.html"><i class="fa fa-check"></i><b>8</b> Project referenties</a></li>
+<li class="chapter" data-level="9" data-path="parameters-in-rmarkdown.html"><a href="parameters-in-rmarkdown.html"><i class="fa fa-check"></i><b>9</b> Parameters in Rmarkdown</a></li>
+<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Reproducible<a href="reproducible.html#reproducible" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="deel-1" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Deel 1<a href="reproducible.html#deel-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="reproducible.html#cb65-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb65-2"><a href="reproducible.html#cb65-2" tabindex="-1"></a></span>
+<span id="cb65-3"><a href="reproducible.html#cb65-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">&quot;Reproducible/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>)</span>
+<span id="cb65-4"><a href="reproducible.html#cb65-4" tabindex="-1"></a></span>
+<span id="cb65-5"><a href="reproducible.html#cb65-5" tabindex="-1"></a><span class="fu">sapply</span>(df[<span class="fu">c</span>(<span class="st">&quot;RawData&quot;</span>, <span class="st">&quot;compName&quot;</span>, <span class="st">&quot;compConcentration&quot;</span>)], typeof)</span></code></pre></div>
+<pre><code>##           RawData          compName compConcentration 
+##          &quot;double&quot;       &quot;character&quot;       &quot;character&quot;</code></pre>
+<p>compConcentration hoort geen character te zijn. concentraties zijn getallen.</p>
+<p>Om een grafiek te maken veranderen we de compConcentration eerst in een getal</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="reproducible.html#cb67-1" tabindex="-1"></a>graph <span class="ot">&lt;-</span> df[, <span class="fu">c</span>(<span class="st">&quot;compName&quot;</span>, <span class="st">&quot;compConcentration&quot;</span>, <span class="st">&quot;RawData&quot;</span>, <span class="st">&quot;expType&quot;</span>)]</span>
+<span id="cb67-2"><a href="reproducible.html#cb67-2" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="reproducible.html#cb67-3" tabindex="-1"></a><span class="co">#Eerst compConcentration veranderen naar numeric.</span></span>
+<span id="cb67-4"><a href="reproducible.html#cb67-4" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(graph<span class="sc">$</span>compConcentration)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="reproducible.html#cb69-1" tabindex="-1"></a><span class="co">#Een waarde wordt geteld als NA, dit kwam omdat een waarde met , was opgegeven.</span></span>
+<span id="cb69-2"><a href="reproducible.html#cb69-2" tabindex="-1"></a><span class="co">#Dit veranderen we met deze command gelijk voor de hele column</span></span>
+<span id="cb69-3"><a href="reproducible.html#cb69-3" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;,&quot;</span>, <span class="st">&quot;.&quot;</span>, graph<span class="sc">$</span>compConcentration)</span>
+<span id="cb69-4"><a href="reproducible.html#cb69-4" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="reproducible.html#cb69-5" tabindex="-1"></a><span class="co">#Nu kan de column verandert worden tot numeric</span></span>
+<span id="cb69-6"><a href="reproducible.html#cb69-6" tabindex="-1"></a>graph<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(graph<span class="sc">$</span>compConcentration)</span>
+<span id="cb69-7"><a href="reproducible.html#cb69-7" tabindex="-1"></a></span>
+<span id="cb69-8"><a href="reproducible.html#cb69-8" tabindex="-1"></a>graph</span></code></pre></div>
+<pre><code>## # A tibble: 360 × 4
+##    compName                   compConcentration RawData expType   
+##    &lt;chr&gt;                                  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     
+##  1 2,6-diisopropylnaphthalene              4.99      44 experiment
+##  2 2,6-diisopropylnaphthalene              4.99      37 experiment
+##  3 2,6-diisopropylnaphthalene              4.99      45 experiment
+##  4 2,6-diisopropylnaphthalene              4.99      47 experiment
+##  5 2,6-diisopropylnaphthalene              4.99      41 experiment
+##  6 2,6-diisopropylnaphthalene              4.99      35 experiment
+##  7 2,6-diisopropylnaphthalene              4.99      41 experiment
+##  8 2,6-diisopropylnaphthalene              4.99      36 experiment
+##  9 2,6-diisopropylnaphthalene              4.99      40 experiment
+## 10 2,6-diisopropylnaphthalene              4.99      38 experiment
+## # ℹ 350 more rows</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="reproducible.html#cb71-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb71-2"><a href="reproducible.html#cb71-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb71-3"><a href="reproducible.html#cb71-3" tabindex="-1"></a></span>
+<span id="cb71-4"><a href="reproducible.html#cb71-4" tabindex="-1"></a>graph <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> RawData, <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb71-5"><a href="reproducible.html#cb71-5" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb71-6"><a href="reproducible.html#cb71-6" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb71-7"><a href="reproducible.html#cb71-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/graph-1.png" width="672" /></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="reproducible.html#cb74-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb74-2"><a href="reproducible.html#cb74-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb74-3"><a href="reproducible.html#cb74-3" tabindex="-1"></a></span>
+<span id="cb74-4"><a href="reproducible.html#cb74-4" tabindex="-1"></a><span class="co">#Stap 1: Bereken de gemiddelde waarde van de control_negative</span></span>
+<span id="cb74-5"><a href="reproducible.html#cb74-5" tabindex="-1"></a>mean_control_negative <span class="ot">&lt;-</span> graph <span class="sc">%&gt;%</span></span>
+<span id="cb74-6"><a href="reproducible.html#cb74-6" tabindex="-1"></a>  <span class="fu">filter</span>(expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb74-7"><a href="reproducible.html#cb74-7" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_value =</span> <span class="fu">mean</span>(RawData, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb74-8"><a href="reproducible.html#cb74-8" tabindex="-1"></a>  <span class="fu">pull</span>(mean_value)</span>
+<span id="cb74-9"><a href="reproducible.html#cb74-9" tabindex="-1"></a></span>
+<span id="cb74-10"><a href="reproducible.html#cb74-10" tabindex="-1"></a><span class="co">#Stap 2: Normaliseer de data, zodat de negatieve controle gemiddeld 1 is</span></span>
+<span id="cb74-11"><a href="reproducible.html#cb74-11" tabindex="-1"></a>graph_normalized <span class="ot">&lt;-</span> graph <span class="sc">%&gt;%</span></span>
+<span id="cb74-12"><a href="reproducible.html#cb74-12" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">normalized_RawData =</span> RawData <span class="sc">/</span> mean_control_negative)</span>
+<span id="cb74-13"><a href="reproducible.html#cb74-13" tabindex="-1"></a></span>
+<span id="cb74-14"><a href="reproducible.html#cb74-14" tabindex="-1"></a><span class="co">#Stap 3: Maak een scatter plot met de genormaliseerde waarden</span></span>
+<span id="cb74-15"><a href="reproducible.html#cb74-15" tabindex="-1"></a>graph_normalized <span class="sc">%&gt;%</span></span>
+<span id="cb74-16"><a href="reproducible.html#cb74-16" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized_RawData, <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb74-17"><a href="reproducible.html#cb74-17" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb74-18"><a href="reproducible.html#cb74-18" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb74-19"><a href="reproducible.html#cb74-19" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb74-20"><a href="reproducible.html#cb74-20" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Genormaliseerde waarde (t.o.v. controle)&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Er zijn 3 controles gedaan tijdens het onderzoek.</p>
+<p>De negatieve controle is in dit geval een ‘normale’ situatie waarin de C. elegans kan leven. Deze test is gedaan om te kijken of de C. elegans wel bruikbaar zijn.</p>
+<p>Er zijn 2 positieve controles uitgevoerd.</p>
+<p>De verwachting voor de controlPositive was dat er door de ethanol die toegevoegd werd C.elegans doodgaan en het aantal nakomelingen dus daalt.</p>
+<p>De controlVehicleA is een controle om te onderzoeken of het wel de toegevoegde stof is die effect heeft, of dat het medium waarin de stof wordt opgelost ook invloed heeft.</p>
+<p>In dit geval kan dus bevestigt worden dat de controlVehicleA juist is. Als de te testen stof niet word toegevoegd zijn het aantal nakomelingen bijna hetzelfde als de controlNegative.</p>
+<p>De negatieve controle is gebruikt om de data te normaliseren. Dit is gedaan zodat het makkelijker is om de data te vergelijken met elkaar. Op deze manier kan de data vergeleken worden zonder dat er alleen naar vaste waarden wordt gekeken. Zo wordt gekeken naar de effecten van de stoffen ten opzichten van de normale situatie van C. elegans.</p>
+<p>Voor een vervolgonderzoek Zou kunnen worden gekeken naar de IC50 en LC50.
+Hieronder een stappenplan om de IC50 van een stof te visualiseren.</p>
+<p>Stap 1: Een stof die je wilt onderzoeken kiezen. De andere stoffen moeten eruit worden gefilterd voor de dose-response curve van een stof.
+Stap 2: De drc package heeft een functie om een log-logistisch model te maken. Dit is de drm functie.
+Stap 3: Gebruik de predict() functie van de drc package om een voorspelling te maken over de dosis range.
+Stap 4: Nu de voorspellingen in een R object staan kan een plot worden gemaakt. Dit kan gedaan worden met ggplot2 of een andere plot package naar wens.
+Hieronder een voorbeeld van een gecodeerd stappenplan.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="reproducible.html#cb77-1" tabindex="-1"></a><span class="co">#Let op!!!</span></span>
+<span id="cb77-2"><a href="reproducible.html#cb77-2" tabindex="-1"></a><span class="co">#Hier staat een voorbeeld van het stappenplan.</span></span>
+<span id="cb77-3"><a href="reproducible.html#cb77-3" tabindex="-1"></a><span class="co">#Dit voorbeeld is gecodeerd door chatgpt!!!</span></span>
+<span id="cb77-4"><a href="reproducible.html#cb77-4" tabindex="-1"></a></span>
+<span id="cb77-5"><a href="reproducible.html#cb77-5" tabindex="-1"></a><span class="co"># Installeer en laad het pakket</span></span>
+<span id="cb77-6"><a href="reproducible.html#cb77-6" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;drc&quot;</span>)  <span class="co"># alleen de eerste keer nodig</span></span></code></pre></div>
+<pre><code>## package &#39;drc&#39; successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+##  C:\Users\justu\AppData\Local\Temp\RtmpIpRd8h\downloaded_packages</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="reproducible.html#cb79-1" tabindex="-1"></a><span class="fu">library</span>(drc)</span>
+<span id="cb79-2"><a href="reproducible.html#cb79-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb79-3"><a href="reproducible.html#cb79-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb79-4"><a href="reproducible.html#cb79-4" tabindex="-1"></a></span>
+<span id="cb79-5"><a href="reproducible.html#cb79-5" tabindex="-1"></a><span class="co"># Filter data voor één stof (bijvoorbeeld &#39;compoundA&#39;)</span></span>
+<span id="cb79-6"><a href="reproducible.html#cb79-6" tabindex="-1"></a>data_filtered <span class="ot">&lt;-</span> graph_normalized <span class="sc">%&gt;%</span> <span class="fu">filter</span>(compName <span class="sc">==</span> <span class="st">&quot;naphthalene&quot;</span>)</span>
+<span id="cb79-7"><a href="reproducible.html#cb79-7" tabindex="-1"></a></span>
+<span id="cb79-8"><a href="reproducible.html#cb79-8" tabindex="-1"></a><span class="co"># Pas een log-logistisch model toe</span></span>
+<span id="cb79-9"><a href="reproducible.html#cb79-9" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">drm</span>(normalized_RawData <span class="sc">~</span> compConcentration, <span class="at">data =</span> data_filtered, <span class="at">fct =</span> <span class="fu">LL.4</span>())</span>
+<span id="cb79-10"><a href="reproducible.html#cb79-10" tabindex="-1"></a></span>
+<span id="cb79-11"><a href="reproducible.html#cb79-11" tabindex="-1"></a><span class="co"># Toon samenvatting van het model (inclusief EC50)</span></span>
+<span id="cb79-12"><a href="reproducible.html#cb79-12" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
+<pre><code>## 
+## Model fitted: Log-logistic (ED50 as parameter) (4 parms)
+## 
+## Parameter estimates:
+## 
+##               Estimate Std. Error t-value p-value    
+## b:(Intercept) 3.529803        NaN     NaN     NaN    
+## c:(Intercept) 0.018190   0.043010  0.4229  0.6735    
+## d:(Intercept) 0.876317   0.019721 44.4366  &lt;2e-16 ***
+## e:(Intercept) 3.128989        NaN     NaN     NaN    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error:
+## 
+##  0.1513537 (80 degrees of freedom)</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="reproducible.html#cb81-1" tabindex="-1"></a><span class="co"># Genereer predicties voor de plot</span></span>
+<span id="cb81-2"><a href="reproducible.html#cb81-2" tabindex="-1"></a>dose_range <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">compConcentration =</span> <span class="fu">exp</span>(<span class="fu">seq</span>(<span class="fu">log</span>(<span class="fu">min</span>(data_filtered<span class="sc">$</span>compConcentration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb81-3"><a href="reproducible.html#cb81-3" tabindex="-1"></a>                                                     <span class="fu">log</span>(<span class="fu">max</span>(data_filtered<span class="sc">$</span>compConcentration, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="at">length.out =</span> <span class="dv">100</span>)))</span>
+<span id="cb81-4"><a href="reproducible.html#cb81-4" tabindex="-1"></a>dose_range<span class="sc">$</span>predicted <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> dose_range)</span>
+<span id="cb81-5"><a href="reproducible.html#cb81-5" tabindex="-1"></a></span>
+<span id="cb81-6"><a href="reproducible.html#cb81-6" tabindex="-1"></a><span class="co"># Maak de dose-response plot</span></span>
+<span id="cb81-7"><a href="reproducible.html#cb81-7" tabindex="-1"></a><span class="fu">ggplot</span>(data_filtered, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized_RawData)) <span class="sc">+</span></span>
+<span id="cb81-8"><a href="reproducible.html#cb81-8" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb81-9"><a href="reproducible.html#cb81-9" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> dose_range, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> predicted), <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb81-10"><a href="reproducible.html#cb81-10" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb81-11"><a href="reproducible.html#cb81-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb81-12"><a href="reproducible.html#cb81-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Dose-response curve&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Concentratie (log schaal)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Genormaliseerde respons&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/stappenplan-1.png" width="672" /></p>
+</div>
+<div id="deel-2" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Deel 2<a href="reproducible.html#deel-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Het gebruikte artikel wat gevonden is op PLOS One. Ik heb gebruikt als zoektermen; All fields: SARS-Cov-2 en data availibility: R code. <span class="citation">(Zaaraoui et al., 2024)</span></p>
+<p><em>Onderdeel 1</em></p>
+<p>De onderzoeksvraag:
+Welke soort antivirale behandeling is het meest effectief om verspreiding te voorkomen.</p>
+<p>De onderzoekers hebben een formule gemaakt voor de snelheid waarmee een geinfecteerde cel nieuwe virussen maakt. Deze formule zou rekening houden met het imuunsysteem. Een formule voor de verspreiding van het virus, deze formule houdt rekening met hoeveel nieuwe virussen zijn gemaakt, en hoe ‘erg’/dichtbij het contact is. Als laatst is een formule gemaakt die kijkt naar hoe effectief een behandeling is bij het remmen van productie van nieuwe virussen. De laatste formule heeft dus invloed op de andere twee. Data van het National Basketballs association’s cohort is gebruikt met data over SARS-CoV-2. Deze data is ingevoerd in de formules. Er zijn verschillende scenario’s met andere tijdstippen van behandeling.</p>
+<p><em>Onderdeel 2</em></p>
+<p>Aangezien een groot deel van het gekozen artikel is gemaakt online, en de data komt uit een ander onderzoek worden de kopjes die te maken hebben met de data bekeken bij het originele onderzoek.</p>
+<p>Beoordeling van het artikel:</p>
+<p>Study Purpose: Yes
+Data Availibility Statement: Yes
+Data Location: Github repository link on PLOS.
+Study Location: No, Er wordt op een github verwezen naar de University of Washington, Department of Medicine en de Fred Hutchinson Cancer Center, Vaccine and Infectious Diseases Division, al staat er niet bij of hier het onderzoek is uitgevoerd om de raw data te verkrijgen.
+Author Review: No, alleen bij het originele onderzoek.
+Ethics Statement:No
+Funding Statement: Yes
+Code Availibility: No (Wel met omweg naar het originele onderzoek waar de data met R is bewerkt)</p>
+<p><em>Onderdeel 3</em></p>
+<p>De R code die het artikel beweert te gebruiken kom vanuit een ander onderzoek waar de data is bewerkt met R. Deze R code is wel gevonden. Het artikel heeft niet benoemd dat het artikel waar de data van is er bij benoemd dat er een werkende versie van Stan en C++ toolchain geinstalleerd hoort te zijn.</p>
+<p>Toch lijkt het eerste script op github alleen R te gebruiken. Dus ga ik proberen de R code te runnen. Er staat in het onderzoek een R script waarmee de eerste 2 figuren zouden moeten worden gemaakt.</p>
+<p>Er wordt een onderzoek gedaan naar antistof hoeveelheden op moment van infectie en na een tijdje. Deze waardes worden vergeleken met mensen die gevaccineerd zijn, gevaccineerd worden tijdens het onderzoek of niet gevaccineerd zijn. Ook wordt er onderscheidt gemaakt tussen de soort vaccinatie.</p>
+<p>Eerst wordt de data gecleaned. Er wordt een soort infectie uit gefilterd. Ook worden een aantal kolommen aangepast omdat de data nog niet goed staat voor verdere analyses. Er worden negatieve variabele en NA’s uit gefilterd.</p>
+<p>Er is een functie gemaakt om snel de gemiddelde antistof-titer waardes te schatten door het gemiddelde vaak opnieuw te berekenen net anders.</p>
+<p>Er worden een plots gemaakt waarin te zien is hoe lang het duurt van infectie tot symptomen, of er een vertraging zit in het hoogste punt van de virale infectie vergeleken met wanneer de symptomen verschijnen.</p>
+<p>Een groot deel van de code bewerkt de data om een plot te maken waarmee de richting van de Ct waardes over de tijd worden aangewezen. Hier zijn ook weer verschillende plots gemaakt op basis van soort vaccinatie, leeftijdscategorie en antilichaam titer.</p>
+<p>Er zijn erg veel lines aan code geschreven om variabelen te kopelen. Hiermee kan een regressie model worden gemaakt om bijvoorbeeld p waardes te berekenen. Er kan gekeken worden naar of de soort vaccinatie invloed heeft op het verschijnen van symptomen of de curve/richting van de Ct waardes over de tijd.</p>
+<p>Na veel van de code zijn er een paar lines geschreven om de gemaakte plots of R objecten naar nieuwe files te kopiëren.</p>
+<p>Aan het einde zijn er een paar plots gemaakt die voorbeelden geven van de infectie curve bij een aantal van de patiënten.</p>
+<p>Ik beoordeel de leesbaarheid met een 3.</p>
+<p>De code is best goed te lezen maar er zouden meer comments in mogen zijn verwerkt om stappen uit te leggen. Ook zijn vooral aan het einde hele lange stukken geschreven om plots te maken. Dit zou voor mijn gevoel ook makkelijker kunnen of met een functie gedaan moeten worden aangezien er plots bij zitten die herhalend zijn met andere data.</p>
+<p>Ik heb zelf de data gedownload en het eerste script uitgeprobeerd. Dit heb ik gedaan door het script in een nieuwe Rmarkdown te zetten en met juiste verwijzingen te knitten. Ook waren de lines eruitgehaald waarmee de R objecten steeds opgeslagen werden in nieuwe files.</p>
+<p>Er waren wel een paar lines die te maken hadden met de soort patiënten. Deze lines hadden te maken met nonplayers. Dit was omdat de ‘players’ en ‘nonplayers’ anders gereguleert waren voor het testen, daarom dat deze werden gescheiden.</p>
+<p>Met de aangepaste paths naar mijn eigen gedownloade data bestand werkte het script meteen.</p>
+<p>Hierom geeft ik het artikel op reproduceerbaarheid een 5.
+(Houd er rekening mee dat het artikel wat ik hier gebruik de data gebruikt van een ander onderzoek, eigenlijk is dat andere onderzoek dus erg reproduceerbaar)</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-management.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sql.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
